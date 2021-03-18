@@ -119,5 +119,5 @@ inputs = {
           awslogs-stream-prefix = "ecs"
         }
   }
-  task_memory                   = 384
+  task_memory                   = 2048
 }
