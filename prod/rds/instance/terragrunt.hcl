@@ -9,7 +9,7 @@ locals {
 }
 
 terraform {
-  source = "github.com/terraform-aws-modules/terraform-aws-rds.git?ref=v2.31.0"
+  source = "github.com/terraform-aws-modules/terraform-aws-rds.git?ref=v2.18.0"
 }
 
 dependency "vpc" {
@@ -77,3 +77,4 @@ inputs = {
   auto_minor_version_upgrade = false
 # disable backups to create DB faster
   backup_retention_period = 0
+}
