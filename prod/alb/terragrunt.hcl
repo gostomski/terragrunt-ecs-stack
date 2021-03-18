@@ -44,13 +44,18 @@ inputs = {
   #enable_cross_zone_load_balancing = true
 
   http_tcp_listeners = [
-    # Forward action is default, either when defined or undefined
     {
-      port               = 80
-      protocol           = "HTTP"
-      target_group_index = 0
+      port        = 80
+      protocol    = "HTTP"
+      action_type = "redirect"
+      redirect = {
+        port        = "443"
+        protocol    = "HTTPS"
+        status_code = "HTTP_301"
+      }
     }
   ]
+
 
   https_listeners = [
     {
